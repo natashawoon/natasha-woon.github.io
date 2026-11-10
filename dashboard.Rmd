@@ -58,9 +58,6 @@ nyc_restaurants |>
   )
 ```
 
-Column {data-width=350}
------------------------------------------------------------------------
-
 ### Inspection Scores Across NYC's Top 10 Cuisines
 
 ```{r}
@@ -91,6 +88,10 @@ nyc_restaurants |>
     showlegend = FALSE
   )
 ```
+
+
+Column {data-width=350}
+-----------------------------------------------------------------------
 
 ### Geographic Distribution of Restaurant Inspection Scores
 
