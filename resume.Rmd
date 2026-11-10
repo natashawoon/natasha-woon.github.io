@@ -1,7 +1,103 @@
 ---
 title: "Resume"
-author: "Natasha Woon"
-date: "2026-11-10"
 output: html_document
 ---
 
+# Education
+
+### Columbia University Mailman School of Public Health
+**Master of Public Health** | Expected May 2027
+
+Certificate: Epidemiology of Population Mental Health
+
+### Smith College
+**Bachelor of Arts in Neuroscience, High Honors** | May 2025
+
+Concentration: Community Engagement and Social Change
+
+# Research Experience
+
+### Graduate Research Assistant | Gazi Azad Lab, Columbia University
+*January 2026 – Present*
+
+- Conduct research on the implementation of evidence-based practices (EBPs) for children with autism spectrum disorder, with a focus on home-school collaboration.
+- Conduct quantitative analyses examining associations between the number and types of EBPs implemented and parent- and teacher-reported implementation outcomes.
+- Clean, merge, and manage datasets using RStudio, including standardized measures of child behavior, social responsiveness, and parent-teacher alliance.
+- Conduct correlation and regression analyses to investigate factors associated with implementation outcomes and child behavioral outcomes.
+- Collaborate with faculty, research coordinators, and statisticians on manuscript development and data interpretation.
+
+### Research Intern | Rakai Health Sciences Program, Columbia University
+*June 2026 – Present*
+
+- Conducted quantitative research examining trends in adolescent health, educational outcomes, and HIV-related behaviors in Rakai, Uganda.
+- Analyzed longitudinal population-based surveillance data from the Rakai Community Cohort Study (RCCS) using RStudio.
+- Investigated associations between orphanhood, parental residence, school enrollment, sexual behaviors, and HIV status among adolescents and young adults.
+- Conducted descriptive and inferential statistical analyses to examine differences in adolescent health outcomes across demographic and socioeconomic groups.
+- Presented research findings to collaborators at Columbia University and the Rakai Health Sciences Program.
+- Contributed to a scoping review examining youth engagement in health research in low- and middle-income countries.
+
+### Research Assistant | Mind in Development Lab, Smith College
+*September 2022 – May 2025*
+
+- Conducted behavioral assessments of attention, memory, language, and executive functioning in children ages 4–5.
+- Collected functional near-infrared spectroscopy (fNIRS) data and conducted caregiver interviews.
+- Analyzed neuroimaging data using RStudio, MATLAB, and FMRIB Software Library for an honors thesis examining socioeconomic status, cognitive stimulation, and working memory.
+
+### Research Assistant | Boston Children's Hospital
+*May 2024 – August 2025*
+
+- Collaborated on research examining congenital heart disease and longitudinal neurodevelopmental outcomes.
+- Extracted and organized clinical, neuroimaging, and developmental assessment data.
+- Recruited families and supported research activities in the neonatal intensive care unit.
+
+### Researcher | Department of Neuroscience, Smith College
+*January 2024 – November 2024*
+
+- Investigated associations between community cohesion and adolescent working memory using data from the Adolescent Brain Cognitive Development Study.
+- Analyzed neuroimaging and survey data using RStudio and Python.
+- Presented research at NEURON and the Society for Neuroscience conferences.
+
+# Professional Experience
+
+### Health Educator | Project STAY, NewYork-Presbyterian
+*October 2025 – May 2026*
+
+- Delivered community-based sexual health education and risk-reduction interventions.
+- Conducted HIV and STI screenings and connected clients with clinical services.
+
+### Jandon Activist Fellow | Smith College
+*September 2024 – August 2025*
+
+- Supported trauma-informed community programming through Safe Passage and Trauma Informed Hampshire County.
+- Assisted with outreach, program planning, and the development of resources for survivors and families.
+
+### Admissions Office Ambassador | Smith College
+*January 2022 – May 2025*
+
+- Led campus tours and student panels for prospective students and families.
+- Trained and mentored new admissions ambassadors.
+
+# Volunteer Experience
+
+### Global Medical Brigades
+*August 2022 – May 2025*
+
+- Delivered health education workshops to children and adolescents.
+- Participated in community health outreach and medical brigades in Guatemala and Honduras.
+
+### Emergency Department Volunteer | Cooley Dickinson Hospital
+*August 2023 – May 2025*
+
+- Supported patients and clinical staff in the emergency department.
+
+# Leadership Experience
+
+### Chapter President | Global Medical Brigades, Smith College
+*August 2022 – May 2025*
+
+- Led the organization of three international medical brigades involving more than 50 volunteers.
+
+### Chapin House President | Smith College
+*August 2023 – May 2025*
+
+- Represented 75 residents and coordinated residential programming and community initiatives.
