@@ -61,15 +61,98 @@ nyc_restaurants |>
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Inspection Scores Across NYC's Top 10 Cuisines
 
 ```{r}
-
+nyc_restaurants |>
+  filter(cuisine_description %in% c(
+    "American", "Chinese", "Café/Coffee/Tea",
+    "Pizza", "Italian", "Mexican",
+    "Latin (Cuban, Dominican, Puerto Rican, South & Central American)",
+    "Bakery", "Japanese", "Caribbean"
+  )) |>
+  distinct(camis, inspection_date, .keep_all = TRUE) |>
+  mutate(
+    cuisine_description = recode(
+      cuisine_description,
+      "Latin (Cuban, Dominican, Puerto Rican, South & Central American)" = "Latin American"
+    )
+  ) |>
+  plot_ly(
+    x = ~cuisine_description,
+    y = ~score,
+    color = ~cuisine_description,
+    type = "box",
+    colors = "Set3"
+  ) |>
+  layout(
+    xaxis = list(title = "Cuisine"),
+    yaxis = list(title = "Inspection Score"),
+    showlegend = FALSE
+  )
 ```
 
-### Chart C
+### Geographic Distribution of Restaurant Inspection Scores
 
 ```{r}
+restaurant_locations =
+  nyc_restaurants |>
+  filter(
+    !is.na(latitude),
+    !is.na(longitude),
+    latitude != 0,
+    longitude != 0,
+    !is.na(score)
+  ) |>
+  arrange(desc(inspection_date)) |>
+  distinct(camis, .keep_all = TRUE)
 
+restaurant_locations |>
+  plot_ly(
+    x = ~longitude,
+    y = ~latitude,
+    type = "scatter",
+    mode = "markers",
+    color = ~score,
+    colors = colorRamp(c("#F2A7C3", "#9B72CF", "#4B1D78")),
+    text = ~dba,
+    alpha = 0.5
+  ) |>
+  layout(
+    xaxis = list(title = "Longitude"),
+    yaxis = list(title = "Latitude")
+  )
+```
+
+
+### Critical Health Violations Over Time
+
+```{r}
+critical_by_month =
+  rest_inspec |>
+  filter(
+    critical_flag %in% c("Y", "N"),
+    lubridate::year(inspection_date) >= 2016
+  ) |>
+  mutate(
+    month = lubridate::floor_date(inspection_date, "month")
+  ) |>
+  group_by(month) |>
+  summarize(
+    percent_critical = mean(critical_flag == "Y") * 100
+  )
+
+critical_by_month |>
+  plot_ly(
+    x = ~month,
+    y = ~percent_critical,
+    type = "scatter",
+    mode = "lines",
+    color = I("#8E6BBE")
+  ) |>
+  layout(
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Percentage of Critical Violations (%)")
+  )
 ```
 
