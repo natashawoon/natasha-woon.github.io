@@ -14,13 +14,48 @@ library(plotly)
 library(p8105.datasets)
 ```
 
+```{r}
+data("rest_inspec")
+```
+
+```{r}
+nyc_restaurants =
+  rest_inspec |>
+  select(
+    camis, dba, boro, cuisine_description,
+    inspection_date, score, grade,
+    grade_date, latitude, longitude
+  ) |>
+  filter(
+    boro %in% c("Manhattan", "Brooklyn", "Queens",
+                "Bronx", "Staten Island"),
+    grade %in% c("A", "B", "C")
+  ) |>
+  distinct()
+```
+
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Inspection Grades by Borough
 
 ```{r}
-
+nyc_restaurants |>
+  distinct(camis, inspection_date, grade, .keep_all = TRUE) |>
+  count(boro, grade) |>
+  plot_ly(
+    x = ~boro,
+    y = ~n,
+    color = ~grade,
+    type = "bar",
+    colors = c("#8E6BBE", "#F2C94C", "#E89AB3")
+  ) |>
+  layout(
+    title = "Restaurant Inspection Grades Across NYC",
+    xaxis = list(title = "Borough"),
+    yaxis = list(title = "Number of Inspections"),
+    barmode = "stack"
+  )
 ```
 
 Column {data-width=350}
