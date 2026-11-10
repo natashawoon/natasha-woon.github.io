@@ -1,0 +1,18 @@
+name: "Natasha's Website"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "Résumé"
+      href: resume.html
+    - text: "Dashboard"
+      href: dashboard.html
+    - icon: fa-envelope fa-lg
+      href: mailto:nw2614@cumc.columbia.edu
+    - icon: fa-github fa-lg
+      href: https://github.com/natashawoon
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/natasha-woon
+output:
+  html_document:
+    theme: readable
